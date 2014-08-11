@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33190FBF198278DE00D7F8B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33190FBE198278DE00D7F8B7 /* Images.xcassets */; };
+		336818701978D2560027FDED /* TOBContractView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368186F1978D2560027FDED /* TOBContractView.m */; };
+		3383930619636C2E005C7BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383930519636C2E005C7BB0 /* Foundation.framework */; };
+		3383930819636C2E005C7BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383930719636C2E005C7BB0 /* CoreGraphics.framework */; };
+		3383930A19636C2E005C7BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383930919636C2E005C7BB0 /* UIKit.framework */; };
+		3383931019636C2E005C7BB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3383930E19636C2E005C7BB0 /* InfoPlist.strings */; };
+		3383931219636C2E005C7BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3383931119636C2E005C7BB0 /* main.m */; };
+		3383931619636C2E005C7BB0 /* TOBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3383931519636C2E005C7BB0 /* TOBAppDelegate.m */; };
+		3383931F19636C2E005C7BB0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383931E19636C2E005C7BB0 /* XCTest.framework */; };
+		3383932019636C2E005C7BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383930519636C2E005C7BB0 /* Foundation.framework */; };
+		3383932119636C2E005C7BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383930919636C2E005C7BB0 /* UIKit.framework */; };
+		3383932919636C2E005C7BB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3383932719636C2E005C7BB0 /* InfoPlist.strings */; };
+		3383932B19636C2E005C7BB0 /* Contract_To_PermTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3383932A19636C2E005C7BB0 /* Contract_To_PermTests.m */; };
+		3383933619636EA9005C7BB0 /* TOBContractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3383933519636EA9005C7BB0 /* TOBContractViewController.m */; };
+		3383933919636EC6005C7BB0 /* TOBPermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3383933819636EC6005C7BB0 /* TOBPermViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3383932219636C2E005C7BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338392FA19636C2E005C7BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3383930119636C2E005C7BB0;
+			remoteInfo = "Contract To Perm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33190FBE198278DE00D7F8B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		3368186E1978D2560027FDED /* TOBContractView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOBContractView.h; sourceTree = "<group>"; };
+		3368186F1978D2560027FDED /* TOBContractView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOBContractView.m; sourceTree = "<group>"; };
+		3383930219636C2E005C7BB0 /* Contract To Perm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contract To Perm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3383930519636C2E005C7BB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3383930719636C2E005C7BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3383930919636C2E005C7BB0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3383930D19636C2E005C7BB0 /* Contract To Perm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Contract To Perm-Info.plist"; sourceTree = "<group>"; };
+		3383930F19636C2E005C7BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3383931119636C2E005C7BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3383931319636C2E005C7BB0 /* Contract To Perm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contract To Perm-Prefix.pch"; sourceTree = "<group>"; };
+		3383931419636C2E005C7BB0 /* TOBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOBAppDelegate.h; sourceTree = "<group>"; };
+		3383931519636C2E005C7BB0 /* TOBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOBAppDelegate.m; sourceTree = "<group>"; };
+		3383931D19636C2E005C7BB0 /* Contract To PermTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Contract To PermTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3383931E19636C2E005C7BB0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3383932619636C2E005C7BB0 /* Contract To PermTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Contract To PermTests-Info.plist"; sourceTree = "<group>"; };
+		3383932819636C2E005C7BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3383932A19636C2E005C7BB0 /* Contract_To_PermTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contract_To_PermTests.m; sourceTree = "<group>"; };
+		3383933419636EA9005C7BB0 /* TOBContractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOBContractViewController.h; sourceTree = "<group>"; };
+		3383933519636EA9005C7BB0 /* TOBContractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOBContractViewController.m; sourceTree = "<group>"; };
+		3383933719636EC6005C7BB0 /* TOBPermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOBPermViewController.h; sourceTree = "<group>"; };
+		3383933819636EC6005C7BB0 /* TOBPermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOBPermViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		338392FF19636C2E005C7BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3383930819636C2E005C7BB0 /* CoreGraphics.framework in Frameworks */,
+				3383930A19636C2E005C7BB0 /* UIKit.framework in Frameworks */,
+				3383930619636C2E005C7BB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3383931A19636C2E005C7BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3383931F19636C2E005C7BB0 /* XCTest.framework in Frameworks */,
+				3383932119636C2E005C7BB0 /* UIKit.framework in Frameworks */,
+				3383932019636C2E005C7BB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		338392F919636C2E005C7BB0 = {
+			isa = PBXGroup;
+			children = (
+				3383930B19636C2E005C7BB0 /* Contract To Perm */,
+				3383932419636C2E005C7BB0 /* Contract To PermTests */,
+				3383930419636C2E005C7BB0 /* Frameworks */,
+				3383930319636C2E005C7BB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3383930319636C2E005C7BB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3383930219636C2E005C7BB0 /* Contract To Perm.app */,
+				3383931D19636C2E005C7BB0 /* Contract To PermTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3383930419636C2E005C7BB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3383930519636C2E005C7BB0 /* Foundation.framework */,
+				3383930719636C2E005C7BB0 /* CoreGraphics.framework */,
+				3383930919636C2E005C7BB0 /* UIKit.framework */,
+				3383931E19636C2E005C7BB0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3383930B19636C2E005C7BB0 /* Contract To Perm */ = {
+			isa = PBXGroup;
+			children = (
+				3383931419636C2E005C7BB0 /* TOBAppDelegate.h */,
+				3383931519636C2E005C7BB0 /* TOBAppDelegate.m */,
+				3383933419636EA9005C7BB0 /* TOBContractViewController.h */,
+				3383933519636EA9005C7BB0 /* TOBContractViewController.m */,
+				3368186E1978D2560027FDED /* TOBContractView.h */,
+				3368186F1978D2560027FDED /* TOBContractView.m */,
+				3383933719636EC6005C7BB0 /* TOBPermViewController.h */,
+				3383933819636EC6005C7BB0 /* TOBPermViewController.m */,
+				33190FBE198278DE00D7F8B7 /* Images.xcassets */,
+				3383930C19636C2E005C7BB0 /* Supporting Files */,
+			);
+			path = "Contract To Perm";
+			sourceTree = "<group>";
+		};
+		3383930C19636C2E005C7BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3383930D19636C2E005C7BB0 /* Contract To Perm-Info.plist */,
+				3383930E19636C2E005C7BB0 /* InfoPlist.strings */,
+				3383931119636C2E005C7BB0 /* main.m */,
+				3383931319636C2E005C7BB0 /* Contract To Perm-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3383932419636C2E005C7BB0 /* Contract To PermTests */ = {
+			isa = PBXGroup;
+			children = (
+				3383932A19636C2E005C7BB0 /* Contract_To_PermTests.m */,
+				3383932519636C2E005C7BB0 /* Supporting Files */,
+			);
+			path = "Contract To PermTests";
+			sourceTree = "<group>";
+		};
+		3383932519636C2E005C7BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3383932619636C2E005C7BB0 /* Contract To PermTests-Info.plist */,
+				3383932719636C2E005C7BB0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3383930119636C2E005C7BB0 /* Contract To Perm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3383932E19636C2F005C7BB0 /* Build configuration list for PBXNativeTarget "Contract To Perm" */;
+			buildPhases = (
+				338392FE19636C2E005C7BB0 /* Sources */,
+				338392FF19636C2E005C7BB0 /* Frameworks */,
+				3383930019636C2E005C7BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Contract To Perm";
+			productName = "Contract To Perm";
+			productReference = 3383930219636C2E005C7BB0 /* Contract To Perm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3383931C19636C2E005C7BB0 /* Contract To PermTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3383933119636C2F005C7BB0 /* Build configuration list for PBXNativeTarget "Contract To PermTests" */;
+			buildPhases = (
+				3383931919636C2E005C7BB0 /* Sources */,
+				3383931A19636C2E005C7BB0 /* Frameworks */,
+				3383931B19636C2E005C7BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3383932319636C2E005C7BB0 /* PBXTargetDependency */,
+			);
+			name = "Contract To PermTests";
+			productName = "Contract To PermTests";
+			productReference = 3383931D19636C2E005C7BB0 /* Contract To PermTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338392FA19636C2E005C7BB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TOB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Toby Booth";
+				TargetAttributes = {
+					3383931C19636C2E005C7BB0 = {
+						TestTargetID = 3383930119636C2E005C7BB0;
+					};
+				};
+			};
+			buildConfigurationList = 338392FD19636C2E005C7BB0 /* Build configuration list for PBXProject "Contract To Perm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 338392F919636C2E005C7BB0;
+			productRefGroup = 3383930319636C2E005C7BB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3383930119636C2E005C7BB0 /* Contract To Perm */,
+				3383931C19636C2E005C7BB0 /* Contract To PermTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3383930019636C2E005C7BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3383931019636C2E005C7BB0 /* InfoPlist.strings in Resources */,
+				33190FBF198278DE00D7F8B7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3383931B19636C2E005C7BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3383932919636C2E005C7BB0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		338392FE19636C2E005C7BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3383933619636EA9005C7BB0 /* TOBContractViewController.m in Sources */,
+				3383931619636C2E005C7BB0 /* TOBAppDelegate.m in Sources */,
+				3383933919636EC6005C7BB0 /* TOBPermViewController.m in Sources */,
+				3383931219636C2E005C7BB0 /* main.m in Sources */,
+				336818701978D2560027FDED /* TOBContractView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3383931919636C2E005C7BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3383932B19636C2E005C7BB0 /* Contract_To_PermTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3383932319636C2E005C7BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3383930119636C2E005C7BB0 /* Contract To Perm */;
+			targetProxy = 3383932219636C2E005C7BB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3383930E19636C2E005C7BB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3383930F19636C2E005C7BB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3383932719636C2E005C7BB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3383932819636C2E005C7BB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3383932C19636C2F005C7BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3383932D19636C2F005C7BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3383932F19636C2F005C7BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contract To Perm/Contract To Perm-Prefix.pch";
+				INFOPLIST_FILE = "Contract To Perm/Contract To Perm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3383933019636C2F005C7BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contract To Perm/Contract To Perm-Prefix.pch";
+				INFOPLIST_FILE = "Contract To Perm/Contract To Perm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3383933219636C2F005C7BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Contract To Perm.app/Contract To Perm";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contract To Perm/Contract To Perm-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Contract To PermTests/Contract To PermTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3383933319636C2F005C7BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Contract To Perm.app/Contract To Perm";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Contract To Perm/Contract To Perm-Prefix.pch";
+				INFOPLIST_FILE = "Contract To PermTests/Contract To PermTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338392FD19636C2E005C7BB0 /* Build configuration list for PBXProject "Contract To Perm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3383932C19636C2F005C7BB0 /* Debug */,
+				3383932D19636C2F005C7BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3383932E19636C2F005C7BB0 /* Build configuration list for PBXNativeTarget "Contract To Perm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3383932F19636C2F005C7BB0 /* Debug */,
+				3383933019636C2F005C7BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3383933119636C2F005C7BB0 /* Build configuration list for PBXNativeTarget "Contract To PermTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3383933219636C2F005C7BB0 /* Debug */,
+				3383933319636C2F005C7BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 338392FA19636C2E005C7BB0 /* Project object */;
+}
