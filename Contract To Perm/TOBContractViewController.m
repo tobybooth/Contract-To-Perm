@@ -172,10 +172,17 @@
     
     // Display descriptive text
     
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    numberFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    numberFormatter.currencyCode = @"USD";
+    numberFormatter.maximumFractionDigits = 0;
+    NSString *idealSalary = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.textField.text.floatValue * 1000]];
+    
     UILabel *description = [[UILabel alloc]init];
     description.backgroundColor = [UIColor clearColor];
     description.textColor = self.lightColor;
-    description.text = [NSString stringWithFormat:@"Your ideal contract hourly rate is"];
+    description.numberOfLines = 2;
+    description.text = [NSString stringWithFormat:@"The ideal contract hourly rate for a \n %@ salary is", idealSalary];
     description.font = [UIFont fontWithName:@"Helvetica" size:15];
     [description sizeToFit];
     
@@ -424,21 +431,20 @@
         return YES;
     }
     
-    if (self.textField.text.floatValue > 999) {
+    if (self.textField.text.floatValue > 4999) {
         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
         numberFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
         numberFormatter.currencyCode = @"USD";
         numberFormatter.maximumFractionDigits = 0;
         NSString * salary = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.textField.text.floatValue * 1000]];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"I like someone who thinks BIG!"
-                                                        message:[NSString stringWithFormat:@"But I like being accurate more. The salary should be entered in multiples of $1000. Do you really want to use a %@? salary?", salary]
+                                                        message:[NSString stringWithFormat:@"But I like to be accurate too. The salary should be entered in multiples of $1000. Do you really want to use a %@? salary?", salary]
                                                        delegate:self
                                               cancelButtonTitle:@"Show me the big money!"
                                               otherButtonTitles:@"Retry",
                                                                 [NSString stringWithFormat:@"Use %.0fk per year", self.textField.text.floatValue / 1000],
                                                                 nil];
         
-        [alert setCancelButtonIndex:0];
         [alert show];
         
         return YES;

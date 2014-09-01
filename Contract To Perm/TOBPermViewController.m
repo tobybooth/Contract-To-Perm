@@ -197,10 +197,17 @@
     
     // Display descriptive text
     
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    numberFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    numberFormatter.currencyCode = @"USD";
+    numberFormatter.maximumFractionDigits = 0;
+    NSString * idealRate = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.textField.text.floatValue]];
+    
     UILabel *description = [[UILabel alloc] init];
     description.backgroundColor = [UIColor clearColor];
     description.textColor = self.lightColor;
-    description.text = [NSString stringWithFormat:@"Your expected salary range is"];
+    description.numberOfLines = 2;
+    description.text = [NSString stringWithFormat:@"The expected salary range upon\nconversion for a rate of %@/hr is", idealRate];
     description.font = [UIFont fontWithName:@"Helvetica" size:15];
     [description sizeToFit];
     
