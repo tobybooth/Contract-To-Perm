@@ -9,7 +9,7 @@
 #import "TOBContractViewController.h"
 #import "TOBContractView.h"
 
-@interface TOBContractViewController () <UITextFieldDelegate>
+@interface TOBContractViewController () <UITextFieldDelegate, UIAlertViewDelegate>
 @property (nonatomic,weak) UILabel *directions;
 @property (nonatomic,weak) UITextField *textField;
 @property (nonatomic,weak) UIButton *button;
@@ -20,6 +20,22 @@
 @end
 
 @implementation TOBContractViewController
+
+#pragma mark - init
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        UITabBarItem *tbi = self.tabBarItem;
+        tbi.title = @"Hourly Contract Rate";
+        tbi.image = [UIImage imageNamed:@"Contract"];
+    }
+    return self;
+}
+
+#pragma mark - View Setup
 
 - (void)loadView
 {
@@ -59,7 +75,6 @@
     textField.clearsOnBeginEditing = YES;
     textField.textAlignment = NSTextAlignmentRight;
     textField.keyboardType = UIKeyboardTypeDecimalPad;
-    textField.returnKeyType = UIReturnKeyDone;
     
     
     textField.delegate = self;
@@ -90,7 +105,7 @@
     
     [button setTitle:@"Calculate" forState:UIControlStateNormal];
     [button addTarget:self
-               action:@selector(toggleButton:)
+               action:@selector(buttonAction:)
      forControlEvents:UIControlEventTouchUpInside];
     
     [backgroundView addSubview:button];
@@ -107,26 +122,9 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [self calculateContractRate:textField.text.floatValue];
-    [textField resignFirstResponder];
-    [self.button setTitle:@"Back" forState:UIControlStateNormal];
-    
-    return YES;
-}
+#pragma mark - Actions
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self) {
-        UITabBarItem *tbi = self.tabBarItem;
-        tbi.title = @"Hourly Contract Rate";
-        tbi.image = [UIImage imageNamed:@"Contract"];
-    }
-    return self;
-}
+
 
 - (void)calculateContractRate:(CGFloat) salary
 {
@@ -184,7 +182,6 @@
     
     CGRect descFrame = description.frame;
     descFrame.origin = CGPointMake(self.view.bounds.size.width, 40);
-    NSLog(@"Description text height: %f", descFrame.size.height);
     description.frame = descFrame;
     description.alpha = 0.0;
     
@@ -297,24 +294,6 @@
 
 }
 
-// ibaction compiles down to void
-// signal to IB that this action can be tied to a UIButton / UIControl
-//
-//- (void)toggleButton:(id)sender
-- (IBAction)toggleButton:(id)sender
-{
-    
-    if ([self.button.titleLabel.text  isEqual: @"Calculate"]) {
-        [sender setTitle:@"Back" forState:UIControlStateNormal];
-        [self calculateContractRate:_textField.text.floatValue];
-        [self.textField resignFirstResponder];
-    }else{
-        [sender setTitle:@"Calculate" forState:UIControlStateNormal];
-        [self clearView];
-    }
-    
-}
-
 - (void)clearView
 {
     CGFloat flyOutDuration = 0.5;
@@ -418,4 +397,76 @@
                          self.button.frame = frame;
                      }completion:NULL];
 }
+
+- (void)buttonAction:(id)sender
+{
+    
+        
+    if ([self.button.titleLabel.text  isEqual: @"Calculate"]) {
+        
+        if ([self textFieldContainsErrors] == NO) {
+            [sender setTitle:@"Back" forState:UIControlStateNormal];
+            [self calculateContractRate:self.textField.text.floatValue];
+            [self.textField resignFirstResponder];
+        }
+        
+    }else{
+        [sender setTitle:@"Calculate" forState:UIControlStateNormal];
+        [self clearView];
+    }
+    
+    
+}
+
+- (BOOL)textFieldContainsErrors
+{
+    if ([self.textField.text isEqualToString:@""]) {
+        return YES;
+    }
+    
+    if (self.textField.text.floatValue > 999) {
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        numberFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+        numberFormatter.currencyCode = @"USD";
+        numberFormatter.maximumFractionDigits = 0;
+        NSString * salary = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:self.textField.text.floatValue * 1000]];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"I like someone who thinks BIG!"
+                                                        message:[NSString stringWithFormat:@"But I like being accurate more. The salary should be entered in multiples of $1000. Do you really want to use a %@? salary?", salary]
+                                                       delegate:self
+                                              cancelButtonTitle:@"Show me the big money!"
+                                              otherButtonTitles:@"Retry",
+                                                                [NSString stringWithFormat:@"Use %.0fk per year", self.textField.text.floatValue / 1000],
+                                                                nil];
+        
+        [alert setCancelButtonIndex:0];
+        [alert show];
+        
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if (buttonIndex == [alertView cancelButtonIndex]) {
+        
+        [self.button setTitle:@"Back" forState:UIControlStateNormal];
+        [self calculateContractRate:self.textField.text.floatValue];
+        [self.textField resignFirstResponder];
+    
+    } else if ([buttonTitle isEqualToString:@"Retry"]) {
+        self.textField.text = @"";
+    
+    } else if ([buttonTitle isEqualToString:[NSString stringWithFormat:@"Use %.0fk per year", self.textField.text.floatValue / 1000]]) {
+        self.textField.text = [NSString stringWithFormat:@"%.0f", self.textField.text.floatValue / 1000];
+    }
+}
+
+
+
+
+
 @end

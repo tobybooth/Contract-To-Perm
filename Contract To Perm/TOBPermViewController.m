@@ -22,6 +22,22 @@
 
 @implementation TOBPermViewController
 
+#pragma mark - init
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        UITabBarItem *tbi = self.tabBarItem;
+        tbi.title = @"Annual Salary Range";
+        tbi.image = [UIImage imageNamed:@"Salary"];
+    }
+    return self;
+}
+
+#pragma mark - View Setup
+
 - (void)loadView
 {
     // ColorScheme
@@ -60,7 +76,7 @@
     textField.clearsOnBeginEditing = YES;
     textField.textAlignment = NSTextAlignmentRight;
     textField.keyboardType = UIKeyboardTypeDecimalPad;
-    textField.returnKeyType = UIReturnKeyDone;
+
     
     
     textField.delegate = self;
@@ -90,7 +106,7 @@
     [button setBackgroundImage:[UIImage imageNamed:@"roundRect"] forState:UIControlStateNormal];
     [button setTitle:@"Calculate" forState:UIControlStateNormal];
     [button addTarget:self
-               action:@selector(toggleButton:)
+               action:@selector(buttonAction:)
      forControlEvents:UIControlEventTouchUpInside];
     
     [backgroundView addSubview:button];
@@ -108,16 +124,9 @@
     self.view = backgroundView;
 }
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self) {
-        UITabBarItem *tbi = self.tabBarItem;
-        tbi.title = @"Annual Salary Range";
-        tbi.image = [UIImage imageNamed:@"Salary"];
-    }
-    return self;
+    return UIStatusBarStyleLightContent;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -129,24 +138,10 @@
     return YES;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
 
-- (IBAction)toggleButton:(id)sender
-{
-    
-    if ([self.button.titleLabel.text  isEqual: @"Calculate"]) {
-        [sender setTitle:@"Back" forState:UIControlStateNormal];
-        [self calculateSalary:_textField.text.floatValue];
-        [self.textField resignFirstResponder];
-    }else{
-        [sender setTitle:@"Calculate" forState:UIControlStateNormal];
-        [self clearView];
-    }
-    
-}
+#pragma mark - Actions
+
+
 
 - (void) calculateSalary:(CGFloat) contractRate
 {
@@ -423,4 +418,32 @@
                          self.button.frame = frame;
                      }completion:NULL];
 }
+
+- (void)buttonAction:(id)sender
+{
+    if ([self textFieldContainsErrors] == NO) {
+        
+    
+        if ([self.button.titleLabel.text  isEqual: @"Calculate"]) {
+            [sender setTitle:@"Back" forState:UIControlStateNormal];
+            [self calculateSalary:_textField.text.floatValue];
+            [self.textField resignFirstResponder];
+        }else{
+            [sender setTitle:@"Calculate" forState:UIControlStateNormal];
+            [self clearView];
+        }
+    }
+    
+}
+
+- (BOOL)textFieldContainsErrors
+{
+    if ([self.textField.text isEqualToString:@""]) {
+        return YES;
+    }
+    
+    return NO;
+    
+}
+
 @end

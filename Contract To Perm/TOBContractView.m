@@ -10,8 +10,8 @@
 
 @implementation TOBContractView
 
-- (id)initWithFrame:(CGRect)frame
-//- (instancetype)initWithFrame:(CGRect)frame // modern ObjC
+
+- (instancetype)initWithFrame:(CGRect)frame 
 {
     self = [super initWithFrame:frame];
     if (self) {

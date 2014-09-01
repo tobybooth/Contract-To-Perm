@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>57ED6A70-59CC-43D9-BFCD-C64C28AB1E7A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Contract To Perm</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8CC01ABB-2F15-44FC-964B-7C5C886F4A5A</key>
+		<string>https://github.com/tobybooth/Contract-To-Perm.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Contract To Perm.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8CC01ABB-2F15-44FC-964B-7C5C886F4A5A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tobybooth/Contract-To-Perm.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8CC01ABB-2F15-44FC-964B-7C5C886F4A5A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8CC01ABB-2F15-44FC-964B-7C5C886F4A5A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Contract To Perm</string>
+		</dict>
+	</array>
+</dict>
+</plist>
